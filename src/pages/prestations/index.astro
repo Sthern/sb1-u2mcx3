@@ -1,0 +1,27 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import SectionTitle from '../../components/SectionTitle.astro';
+import Introduction from '../../components/services/Introduction.astro';
+import ServiceList from '../../components/services/ServiceList.astro';
+---
+
+<Layout title="Nos prestations">
+  <Hero 
+    title="Nos prestations"
+    subtitle="Nous concrétisons la réduction des émissions de CO2 de vos activités"
+  />
+  
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <SectionTitle
+        title="Nos services"
+        subtitle="ZenCO2 vous accompagne dans l'ensemble du processus de transformation de votre organisation vers la décarbonisation."
+        centered={true}
+      />
+      
+      <Introduction />
+      <ServiceList />
+    </div>
+  </section>
+</Layout>

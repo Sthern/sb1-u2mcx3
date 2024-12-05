@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Introduction from '../components/home/Introduction.astro';
+import Benefits from '../components/home/Benefits.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+---
+
+<Layout title="Accueil">
+  <Hero 
+    title="La décarbonisation, une nouvelle source de création de valeur"
+    subtitle="Nous concrétisons vos objectifs de réduction des émissions de carbone"
+  />
+  
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <SectionTitle 
+        title="Engagés pour la décarbonisation"
+        centered={true}
+      />
+      <Introduction />
+      <div class="max-w-3xl mx-auto mt-12">
+        <Benefits />
+      </div>
+    </div>
+  </section>
+</Layout>

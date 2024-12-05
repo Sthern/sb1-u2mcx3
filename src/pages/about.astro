@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Description from '../components/about/Description.astro';
+import Partners from '../components/about/Partners.astro';
+---
+
+<Layout title="À propos">
+  <Hero 
+    title="Nous concrétisons vos objectifs de décarbonisation"
+    subtitle="Un partenariat pour la décarbonisation des entreprises romandes"
+  />
+  
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <Description />
+      <Partners />
+    </div>
+  </section>
+</Layout>

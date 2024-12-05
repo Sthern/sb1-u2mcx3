@@ -1,0 +1,27 @@
+---
+const menuItems = [
+  { text: "Nos prestations", href: "/prestations" },
+  { text: "À propos", href: "/about" },
+  { text: "Contact", href: "/contact" }
+];
+---
+
+<header class="bg-white shadow-md fixed w-full z-50">
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <a href="/" class="text-2xl font-bold text-blue-600">ZenCO2</a>
+    <nav>
+      <ul class="flex space-x-6">
+        {menuItems.map(item => (
+          <li>
+            <a href={item.href} class="text-gray-600 hover:text-blue-600 transition-colors">
+              {item.text}
+            </a>
+          </li>
+        ))}
+        <li>
+          <a href="#" class="text-gray-600 hover:text-blue-600">FR</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

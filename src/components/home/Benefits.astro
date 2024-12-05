@@ -1,0 +1,32 @@
+---
+const benefits = [
+  {
+    title: "Réduisez vos émissions de CO2 et faites des économies",
+    icon: "✓"
+  },
+  {
+    title: "Communiquez à vos clients vos valeurs responsables avec des actions concrètes",
+    icon: "✓"
+  },
+  {
+    title: "Engagez et fidélisez vos salariés",
+    icon: "✓"
+  },
+  {
+    title: "Attirez des investisseurs sensibles au financement de vos actifs durables",
+    icon: "✓"
+  }
+];
+---
+
+<div class="bg-blue-50 p-8 rounded-lg">
+  <h3 class="text-xl font-bold mb-4">Bénéfices de s'engager aujourd'hui :</h3>
+  <ul class="space-y-3">
+    {benefits.map(benefit => (
+      <li class="flex items-center">
+        <span class="text-blue-600 mr-2">{benefit.icon}</span>
+        {benefit.title}
+      </li>
+    ))}
+  </ul>
+</div>

@@ -1,0 +1,50 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import SectionTitle from '../../components/SectionTitle.astro';
+import Button from '../../components/Button.astro';
+
+const benefits = [
+  "Obtenir un indicateur chiffré de votre bilan carbone actuel",
+  "Vous comparer à d'autres entreprises du même secteur d'activité",
+  "Estimer le potentiel de réduction des émissions",
+  "Réduire votre exposition à des risques climatiques et énergétiques"
+];
+---
+
+<Layout title="Diagnostics">
+  <Hero
+    title="Mesurer votre empreinte carbone"
+    subtitle="Quantifiez votre trajectoire carbone et comprenez votre potentiel de réduction"
+  />
+
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto">
+        <p class="text-lg text-gray-700 mb-8">
+          La quantification de l'empreinte carbone des activités de votre entreprise est le point de départ pour agir. 
+          Elle vous permet d'obtenir une vue globale des émissions de gaz à effet de serre de votre entreprise, 
+          d'identifier les postes principaux d'émissions et vous fournit une base de référence pour fixer des objectifs de réduction.
+        </p>
+
+        <div class="bg-gray-50 p-8 rounded-lg mb-12">
+          <SectionTitle title="Cette étape permet" />
+          <ul class="space-y-4">
+            {benefits.map(benefit => (
+              <li class="flex items-start">
+                <span class="text-blue-600 mr-3 mt-1">✓</span>
+                <span>{benefit}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="text-center">
+          <Button href="/contact" variant="primary">
+            Commencer votre diagnostic
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

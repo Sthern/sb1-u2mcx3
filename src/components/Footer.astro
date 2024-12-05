@@ -1,0 +1,48 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-gray-900 text-white py-12">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="text-xl font-bold mb-4">ZenCO2</h3>
+        <p>Rue de Lausanne 53<br>CH-1110 Morges</p>
+        <p class="mt-2">+41 21 802 93 51</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-4">Présentation</h3>
+        <ul class="space-y-2">
+          <li><a href="/about" class="hover:text-blue-400">La décarbonisation</a></li>
+          <li><a href="/team" class="hover:text-blue-400">L'équipe</a></li>
+          <li><a href="/references" class="hover:text-blue-400">Références</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-4">Nos services</h3>
+        <ul class="space-y-2">
+          <li><a href="/services/diagnostics" class="hover:text-blue-400">Diagnostics</a></li>
+          <li><a href="/services/planning" class="hover:text-blue-400">Planification</a></li>
+          <li><a href="/services/reduction" class="hover:text-blue-400">Réduction des émissions</a></li>
+          <li><a href="/services/compensation" class="hover:text-blue-400">Compensation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-4">Newsletter</h3>
+        <form class="mt-4">
+          <input 
+            type="email" 
+            placeholder="Votre email" 
+            class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:border-blue-500"
+          >
+          <button class="mt-2 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition-colors">
+            S'inscrire
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="mt-12 pt-8 border-t border-gray-800 text-center text-sm text-gray-400">
+      <p>ZenCO2 © {currentYear} - Informations légales - Website by Wavemind.ch</p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import SectionTitle from '../../components/SectionTitle.astro';
+
+const services = [
+  {
+    title: "Diagnostics",
+    description: "Quantifiez votre trajectoire carbone et comprenez votre potentiel de réduction.",
+    href: "/services/diagnostics"
+  },
+  {
+    title: "Planification",
+    description: "Définissez votre ambition et construisez le plan d'exécution.",
+    href: "/services/planning"
+  },
+  {
+    title: "Réduction des émissions",
+    description: "Concrétiser et piloter votre décarbonisation durablement.",
+    href: "/services/reduction"
+  },
+  {
+    title: "Compensation",
+    description: "Compensez votre empreinte résiduelle de façon cohérente.",
+    href: "/services/compensation"
+  }
+];
+---
+
+<Layout title="Nos Services">
+  <Hero
+    title="Nos prestations"
+    subtitle="Nous concrétisons la réduction des émissions de CO2 de vos activités"
+  />
+
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <SectionTitle
+        title="Nos services"
+        subtitle="ZenCO2 vous accompagne dans l'ensemble du processus de transformation de votre organisation vers la décarbonisation."
+        centered={true}
+      />
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {services.map(service => (
+          <ServiceCard {...service} />
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Button from '../components/Button.astro';
+---
+
+<Layout title="Hors ligne">
+  <Hero
+    title="Vous êtes hors ligne"
+    subtitle="Il semble que vous n'ayez pas de connexion internet"
+  />
+  
+  <section class="py-20">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-lg text-gray-700 mb-8">
+        Veuillez vérifier votre connexion internet et réessayer.
+      </p>
+      <Button href="/" variant="primary">
+        Retour à l'accueil
+      </Button>
+    </div>
+  </section>
+</Layout>
